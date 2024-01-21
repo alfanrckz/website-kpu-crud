@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Heading } from "@chakra-ui/react";
 import LandingPage from "@/components/LandingPage";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 
 
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <Navbar/>
       <LandingPage/>
+      <Footer/>
       
     </>
 

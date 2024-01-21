@@ -1,0 +1,50 @@
+[
+    {
+      "number": "1",
+      "name": "Anas Taylor ",
+      "image": "https://media.suara.com/pictures/653x366/2023/05/30/87737-anies-baswedan-koalisi-perubahan-tim-delapan.webp",
+      "visionMission": [
+        "Membangun Guru yang berkualitas",
+        "Membangun Masjid yang Bagus",
+        "Membangun Sekolah yang Bagus"
+      ],
+      "coalition": [
+        "Partai Putin Sejahtera",
+        "Partai Golkar Kuning",
+        "PPP Pekalongan"
+      ]
+    },
+    {
+      "number": "2",
+      "name": "Pramundo",
+      "image": "https://rmol.id/images/berita/normal/2023/12/455572_08060613122023_prabowo.jpeg",
+      "visionMission": [
+        "Membangun Negara Menjadi Maju",
+        "Membangun Wilayah Kelautan",
+        "Membuat Enrgi Terbarukan"
+      ],
+      "coalition": [
+        "Partai Trump Sejahtera",
+        "Partai Pemgsung Kuning",
+        "PPP Pemalang"
+      ]
+    },
+    {
+      "number": "3",
+      "name": "Ghansin Impact",
+      "image": "https://asset.kompas.com/crops/A0qds-2BjWmU4g8xkkxJANW0Zmo=/0x0:0x0/750x500/data/photo/2022/10/24/635673c468c46.jpg",
+      "visionMission": [
+        "Membuat Negara Bebas Korupsi",
+        "Membuat program Pengelola Sampah",
+        "Memebuat Indonesia menjadi Maju"
+      ],
+      "coalition": [
+        "PAN Sejahtera Sesatera",
+        "Partai Pemsung Kuning",
+        "PKB Bali United"
+      ]
+    }
+  ]
+  
+
+  
