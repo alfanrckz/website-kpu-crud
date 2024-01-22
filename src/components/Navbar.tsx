@@ -31,8 +31,11 @@ const Navbar: React.FC = () => {
     <>
       <Box bg="transparent" p={4}>
         <Flex>
+          <Link href={'/'}>
           <Heading size="sm">PEMILU KPU WAKANDA</Heading>
+          </Link>
           <Spacer />
+         
           <Box display={{ base: "block", md: "none" }}>
             <IconButton
               icon={<HamburgerIcon />}
@@ -41,9 +44,24 @@ const Navbar: React.FC = () => {
             />
           </Box>
           <Box display={{ base: "none", md: "block" }}>
-            <Link href="/">
-            <LoginModal/> 
+            <Link href="/paslon">
+              <Button variant="ghost" mr={2}>
+                Paslon
+              </Button>
             </Link>
+            <Link href="/partai">
+              <Button variant="ghost" mr={2}>
+                Partai
+              </Button>
+            </Link>
+            <Link href="/vote">
+              <Button variant="ghost" mr={2}>
+                Voting
+              </Button>
+            </Link>
+
+            <LoginModal />
+
             <Button variant="ghost" onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
@@ -58,11 +76,25 @@ const Navbar: React.FC = () => {
           <DrawerHeader>Alfanrckz</DrawerHeader>
           <DrawerBody>
             <VStack spacing={4}>
-              
-            <LoginModal/> 
-                
-            
-              <Button onClick={toggleColorMode}>
+              <Link href="/paslon">
+                <Button variant="ghost" w="full">
+                  Paslon
+                </Button>
+              </Link>
+              <Link href="/partai">
+                <Button variant="ghost" w="full">
+                  Partai
+                </Button>
+              </Link>
+              <Link href="/vote">
+                <Button variant="ghost" w="full">
+                  Voting
+                </Button>
+              </Link>
+
+              <LoginModal />
+
+              <Button w="full" onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
             </VStack>

@@ -19,11 +19,10 @@ const LoginModal: React.FC = () => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Handle login logic here
+   
     console.log('Username:', username);
     console.log('Password:', password);
-    // You can add your authentication logic here
-    // For simplicity, this example just logs the entered username and password
+   
     onClose();
   };
 
@@ -36,7 +35,7 @@ const LoginModal: React.FC = () => {
         onClose={onClose}
         size="xs"
         motionPreset="slideInBottom"
-        isCentered  // Properti ini akan menempatkan modal di tengah secara otomatis
+        isCentered  
       >
         <ModalOverlay />
         <ModalContent>

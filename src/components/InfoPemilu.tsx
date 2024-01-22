@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import { Box, Flex, Text, Button } from '@chakra-ui/react';
-import Chart from 'chart.js/auto';
+import { Box, Flex, Text } from '@chakra-ui/react';
+import Chart, { ChartConfiguration, ChartDataset } from 'chart.js/auto'; // Import tipe ChartConfiguration dan ChartDataset
 import VoteModal from './VoteModal';
 
 const InfoPemilu: React.FC = () => {
@@ -8,33 +8,37 @@ const InfoPemilu: React.FC = () => {
   const chartInstance = useRef<Chart | null>(null);
 
   useEffect(() => {
-    if (chartInstance.current) {
-      chartInstance.current.destroy();
-    }
-
-    const myChartRef = chartRef.current?.getContext('2d');
-
-    if (myChartRef) {
-      chartInstance.current = new Chart(myChartRef, {
-        type: 'pie',
-        data: {
-          datasets: [
-            {
-              data: [35, 25, 20],
-              backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'],
-              hoverOffset: 4,
-            },
-          ],
-        },
-      });
-    }
-
-    return () => {
+    // Pastikan hanya dijalankan di sisi klien
+    if (typeof window !== 'undefined' && chartRef.current) {
       if (chartInstance.current) {
         chartInstance.current.destroy();
       }
-    };
+
+      const myChartRef = chartRef.current.getContext('2d');
+
+      if (myChartRef) {
+        chartInstance.current = new Chart(myChartRef, {
+          type: 'pie',
+          data: {
+            datasets: [
+              {
+                data: [35, 25, 20],
+                backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'],
+                hoverOffset: 4,
+              },
+            ],
+          },
+        } as ChartConfiguration<'pie', ChartDataset<'pie'>>); // Sesuaikan dengan tipe ChartConfiguration dan ChartDataset yang diharapkan
+      }
+
+      return () => {
+        if (chartInstance.current) {
+          chartInstance.current.destroy();
+        }
+      };
+    }
   }, []);
+  
 
   return (
     <Box py={9}>
